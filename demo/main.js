@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vonic from 'vonic'
+import Vonic from 'zview-mobile'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
