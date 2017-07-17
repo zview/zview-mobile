@@ -11,8 +11,11 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 
+[*.vue]
+indent_size = 4
+
 [*.html]
-indent_size = 2
+indent_size = 4
 
 [Makefile]
 indent_style = tab
