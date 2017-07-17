@@ -71,4 +71,4 @@ class ModalManager {
   }
 }
 
-export default new ModalManager()
+window.$modal = new ModalManager()

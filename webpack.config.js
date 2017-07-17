@@ -71,7 +71,7 @@ module.exports = {
     extensions: ['.js', '.vue'],
     alias: {
       'vue$': 'vue/dist/vue.common.js',
-      'vonic': path.resolve(__dirname, './src/index.js')
+      'zview-mobile': path.resolve(__dirname, './src/index.js')
     }
   },
   devServer: {
@@ -86,8 +86,8 @@ if (process.env.NODE_ENV === 'production') {
     module.exports.entry = './src/index.js'
     module.exports.output = {
       path: path.resolve(__dirname, './dist'),
-      filename: 'vonic.min.js',
-      library: 'Vonic',
+      filename: 'zview-mobile.min.js',
+      library: 'zview-mobile',
       libraryTarget: 'umd',
       umdNamedDefine: true
     }
@@ -114,7 +114,7 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new ExtractTextPlugin(process.env.BUILD == 'publish' ? 'vonic.min.css' : 'app.css'),
+    new ExtractTextPlugin(process.env.BUILD == 'publish' ? 'zview-mobile.min.css' : 'app.css'),
     new OptimizeCssPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
@@ -153,7 +153,7 @@ if (process.env.NODE_ENV === 'production') {
 
   if (process.env.BUILD == 'publish') {
     // Banner
-    var banner = 'Vonic \nversion: ' + pkg.version + ' \nrepo: https://github.com/wangdahoo/vonic \nbuild: ' + moment().format('YYYY-MM-DD HH:mm:ss')
+    var banner = 'zview-mobile \nversion: ' + pkg.version + ' \nrepo: https://github.com/zview/zview-mobile \nbuild: ' + moment().format('YYYY-MM-DD HH:mm:ss')
 
     module.exports.plugins = module.exports.plugins.concat([
       new webpack.BannerPlugin({

@@ -1,7 +1,7 @@
 {
   "name": "zview-mobile",
-  "version": "0.0.7",
-  "title": "zview",
+  "version": "0.1.2",
+  "title": "zview-mobile",
   "description": "Mobile UI Components, based on Vue.js and ionic CSS.",
   "homepage": "http://www.zuv.cc/zview-mobile",
   "readme": "A flex mobile UI components library",
@@ -16,7 +16,7 @@
     "ui components",
     "spa"
   ],
-  "main": "dist/vonic.min.js",
+  "main": "dist/zview-mobile.min.js",
   "files": [
     "dist",
     "src"

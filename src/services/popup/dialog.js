@@ -38,4 +38,4 @@ class Dialog {
   }
 }
 
-export default new Dialog()
+window.$dialog = new Dialog()

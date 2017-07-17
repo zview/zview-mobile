@@ -9,7 +9,7 @@ var webpack = require('webpack')
 var webpackConfig = require('./webpack.config')
 
 var spinner = ora('building ' +
-  (process.env.BUILD == 'publish' ? 'mview for production' : 'gh-pages') + '...')
+  (process.env.BUILD == 'publish' ? 'zview mobile for production' : 'gh-pages') + '...')
 spinner.start()
 
 if (process.env.BUILD == 'publish') shell.rm('-rf', './dist')

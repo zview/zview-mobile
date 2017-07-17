@@ -6,10 +6,11 @@
 </template>
 <script>
   import assign from 'object-assign'
+  import channel from './channel'
   import Vue from 'vue'
-  import Header from './Header'
-  import channel from '../channel'
-  import { timeout, is_ios } from '../utils'
+  import Header from './header'
+
+  import { timeout, is_ios_device } from './utils'
 
   let renderCount = 0
 
@@ -71,7 +72,7 @@
 
       createHeader(options) {
         let props = {
-          enableTitleTransition: is_ios(),
+          enableTitleTransition: is_ios_device(),
           showBack: false,
           showMenu: false
         }

@@ -1,8 +1,7 @@
 import Vue from 'vue'
+import Vonic from 'vonic'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
-import Vonic from 'vonic'
-Vue.use(Vonic)
 
 import Index from './components/Index'
 import Home from './components/Home'
@@ -179,16 +178,13 @@ const afterEach = (toRoute, fromRoute) => {
   }
 }
 
-const router = new VueRouter({
-  routes: routes
-})
+// Register beforeEach and afterEach Hooks
+Vonic.app.setConfig('beforeEach', beforeEach)
+Vonic.app.setConfig('afterEach', afterEach)
 
-// register global guards
-router.beforeEach(beforeEach)
-router.afterEach(afterEach)
+// Vonic.app.setConfig('pushMethod', 'replace')
+// Vonic.app.setConfig('pageTransition', 'ios')
 
 Vue.use(Vonic.app, {
-  router,
-  pushMehod: 'push', // push, replace
-  pageTransition: 'ios'
+  routes: routes
 })
