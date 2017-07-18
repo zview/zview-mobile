@@ -7,3 +7,4 @@ bower_components
 /index.html
 /index.tpl.html
 /yarn.lock
+/dist
