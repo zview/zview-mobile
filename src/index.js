@@ -1,1 +1,1 @@
-module.exports = require('./vonic').default
+module.exports = require('./zviewm').default

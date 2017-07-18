@@ -91,11 +91,11 @@ if (process.env.NODE_ENV === 'production') {
       libraryTarget: 'umd',
       umdNamedDefine: true
     }
-    module.exports.externals = {
-      'vue': 'Vue',
-      'vue-router': 'VueRouter',
-      'axios': 'axios'
-    }
+    // module.exports.externals = {
+    //   'vue': 'Vue',
+    //   'vue-router': 'VueRouter',
+    //   'axios': 'axios'
+    // }
   } else { // docs
     module.exports.entry = [
       './demo/main.js'
