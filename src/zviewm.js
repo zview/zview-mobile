@@ -43,19 +43,17 @@ import Datepicker from './components/datepicker/index.vue';
 // Modal
 import Modal from './services/modal/Modal.vue'
 
-// Service
-import './services/backdrop'
-import './services/loading'
-import './services/popup/dialog.js'
-import './services/popup/index.js'
-import './services/cascadepanel/index.js'
-import './services/actionsheet/index.js'
-import './services/tabbar/index.js'
-import './services/sidebar/index.js'
-import './services/modal/index.js'
-
+// Services
+import $backdrop from './services/backdrop'
+import { $loading, $toast } from './services/loading'
+import $dialog from './services/popup/dialog.js'
+import $popup from './services/popup/index.js'
+import $cascadePanel from './services/cascadepanel/index.js'
+import $actionSheet from './services/actionsheet/index.js'
+import $tabbar from './services/tabbar/index.js'
+import $sidebar from './services/sidebar/index.js'
+import $modal from './services/modal/index.js'
 import Storage from 'storage-js-iso'
-window.$storage = Storage
 
 
 export default {
@@ -93,6 +91,19 @@ export default {
 
     // Modal
     Vue.component('modal', Modal);
+
+    // Services
+    Vue.prototype.$zvm_backdrop = window.$backdrop = $backdrop;
+    Vue.prototype.$zvm_loading = window.$loading = $loading;
+    Vue.prototype.$zvm_toast = window.$toast = $toast;
+    Vue.prototype.$zvm_dialog = window.$dialog = $dialog;
+    Vue.prototype.$zvm_popup = window.$popup = $popup;
+    Vue.prototype.$zvm_cascadePanel = window.$cascadePanel = $cascadePanel;
+    Vue.prototype.$zvm_actionSheet = window.$actionSheet = $actionSheet;
+    Vue.prototype.$zvm_tabbar = window.$tabbar = $tabbar;
+    Vue.prototype.$zvm_sidebar = window.$sidebar = $sidebar;
+    Vue.prototype.$zvm_modal = window.$modal = $modal;
+    Vue.prototype.$zvm_storage = window.$storage = Storage;
 
   }
 };
