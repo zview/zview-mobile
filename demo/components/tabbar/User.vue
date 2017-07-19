@@ -5,7 +5,7 @@
     </von-header>
     <div class="page-content padding-top">
       <p class="text-center">User Info</p>
-      <a class="button button-positive button-block button-clear" @click="$router.forward('/pageFromTabbar')">去另一个页面</a>
+      <a class="button button-positive button-block button-clear" @click="$router.push('/pageFromTabbar')">去另一个页面</a>
     </div>
   </div>
 </template>

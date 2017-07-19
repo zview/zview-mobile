@@ -107,6 +107,10 @@ const Routers = [
   { path: '/test', component: Test }
 ];
 
+window.__page_transition__ = 'ios';  // android
+window.__disable_nav_title_transition__ = false;
+window.__push_method__ = 'push'; //replace
+
 // 路由配置
 const RouterConfig = {
   // mode: 'history',

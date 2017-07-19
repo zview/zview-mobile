@@ -105,7 +105,7 @@
             },
 
             doc() {
-                location.href = 'https://wangdahoo.github.io/vonic-documents'
+                location.href = 'https://zview.github.io/zview-mobile-documents'
             }
         }
     }

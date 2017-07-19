@@ -111,5 +111,7 @@ export default {
     Vue.prototype.$z_modal = window.$modal = $modal;
     Vue.prototype.$z_storage = window.$storage = Storage;
 
+    // window.$router = router;
+
   }
 };

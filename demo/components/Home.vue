@@ -13,43 +13,43 @@
                 <div class="item item-divider">基础</div>
 
                 <list class="list-ios hl-list-borderless">
-                    <item class="item-icon-right" @click.native="$router.forward('/basic/button')">
+                    <item class="item-icon-right" @click.native="$router.push('/basic/button')">
                         Button <span class="item-note">按钮</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/basic/mdButton')">
+                    <item class="item-icon-right" @click.native="$router.push('/basic/mdButton')">
                         MdButton <span class="item-note">Material Design 风格</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/basic/input')">
+                    <item class="item-icon-right" @click.native="$router.push('/basic/input')">
                         Input <span class="item-note">输入框</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/basic/search')">
+                    <item class="item-icon-right" @click.native="$router.push('/basic/search')">
                         Search <span class="item-note">搜索框</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/basic/radio')">
+                    <item class="item-icon-right" @click.native="$router.push('/basic/radio')">
                         Radio <span class="item-note">单选框</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/basic/checkbox')">
+                    <item class="item-icon-right" @click.native="$router.push('/basic/checkbox')">
                         Checkbox <span class="item-note">复选框</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/basic/toggle')">
+                    <item class="item-icon-right" @click.native="$router.push('/basic/toggle')">
                         Toggle <span class="item-note">开关按钮</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/basic/range')">
+                    <item class="item-icon-right" @click.native="$router.push('/basic/range')">
                         Range Slider <span class="item-note">滑块</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/basic/badge')">
+                    <item class="item-icon-right" @click.native="$router.push('/basic/badge')">
                         Badge <span class="item-note">徽章</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/basic/dialog')">
+                    <item class="item-icon-right" @click.native="$router.push('/basic/dialog')">
                         Dialog <span class="item-note">对话框</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
@@ -66,27 +66,27 @@
                 <!-- layout -->
                 <div class="item item-divider">布局</div>
                 <list class="list-ios hl-list-borderless">
-                    <item class="item-icon-right" @click.native="$router.forward('/layout/header')">
+                    <item class="item-icon-right" @click.native="$router.push('/layout/header')">
                         Header <span class="item-note">页头</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/layout/list')">
+                    <item class="item-icon-right" @click.native="$router.push('/layout/list')">
                         List <span class="item-note">列表</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/layout/cells')">
+                    <item class="item-icon-right" @click.native="$router.push('/layout/cells')">
                         Cells <span class="item-note">宫格</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/layout/tabs')">
+                    <item class="item-icon-right" @click.native="$router.push('/layout/tabs')">
                         Tabs <span class="item-note">选项卡</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/layout/buttonbar')">
+                    <item class="item-icon-right" @click.native="$router.push('/layout/buttonbar')">
                         ButtonBar <span class="item-note">iOS 选项卡</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/layout/scalable')">
+                    <item class="item-icon-right" @click.native="$router.push('/layout/scalable')">
                         Scalable <span class="item-note">缩放</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
@@ -95,39 +95,39 @@
                 <!-- advanced -->
                 <div class="item item-divider">高级</div>
                 <list class="list-ios hl-list-borderless">
-                    <item class="item-icon-right" @click.native="$router.forward('/advanced/swiper')">
+                    <item class="item-icon-right" @click.native="$router.push('/advanced/swiper')">
                         Swiper <span class="item-note">轮播</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/advanced/vswipe')">
+                    <item class="item-icon-right" @click.native="$router.push('/advanced/vswipe')">
                         VSwipe <span class="item-note">v1.0.0</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/advanced/scroll')">
+                    <item class="item-icon-right" @click.native="$router.push('/advanced/scroll')">
                         Scroll <span class="item-note">下拉刷新、无限加载</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/advanced/scroller')">
+                    <item class="item-icon-right" @click.native="$router.push('/advanced/scroller')">
                         Vue Scroller <span class="item-note">v2.1.0</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/advanced/cascade')">
+                    <item class="item-icon-right" @click.native="$router.push('/advanced/cascade')">
                         Cascade <span class="item-note">级联</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/advanced/accordion')">
+                    <item class="item-icon-right" @click.native="$router.push('/advanced/accordion')">
                         Accordion <span class="item-note">手风琴组件</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/advanced/datepicker')">
+                    <item class="item-icon-right" @click.native="$router.push('/advanced/datepicker')">
                         Datepicker <span class="item-note">日期选择器</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/advanced/popup')">
+                    <item class="item-icon-right" @click.native="$router.push('/advanced/popup')">
                         Popup <span class="item-note">自定义弹层</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/advanced/actionsheet')">
+                    <item class="item-icon-right" @click.native="$router.push('/advanced/actionsheet')">
                         ActionSheet <span class="item-note">操作列表</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
@@ -135,15 +135,15 @@
                         Sidebar <span class="item-note">侧边栏</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/advanced/tabbar/home')">
+                    <item class="item-icon-right" @click.native="$router.push('/advanced/tabbar/home')">
                         Tabbar <span class="item-note">嵌套路由使用</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/advanced/tabbarWithoutRoutes')">
+                    <item class="item-icon-right" @click.native="$router.push('/advanced/tabbarWithoutRoutes')">
                         Tabbar Standalone <span class="item-note">单独使用</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
-                    <item class="item-icon-right" @click.native="$router.forward('/advanced/modal')">
+                    <item class="item-icon-right" @click.native="$router.push('/advanced/modal')">
                         Modal <span class="item-note">模态窗</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
@@ -173,23 +173,23 @@
         mounted() {
             let vm = this;
             let template = `
-        <p style="font-size: 13px;">
-        No man is an island,<br>
-        entire of itself.<br>
-        Every man is a piece of the continent,<br>
-        a part of the main.<br>
-        If a clod be washed away by the sea,<br>
-        Europe is the less,<br>
-        as well as if a promontory were,<br>
-        as well as if a manor of thy friend's or of thine own were.<br>
-        Any man's death diminishes me.<br>
-        Because I am involved in mankind.<br>
-        And,<br>
-        therefore,<br>
-        never send to know for whom the bells tolls,<br>
-        it tolls for thee.<br>
-        </p>
-      `;
+                <p style="font-size: 13px;">
+                No man is an island,<br>
+                entire of itself.<br>
+                Every man is a piece of the continent,<br>
+                a part of the main.<br>
+                If a clod be washed away by the sea,<br>
+                Europe is the less,<br>
+                as well as if a promontory were,<br>
+                as well as if a manor of thy friend's or of thine own were.<br>
+                Any man's death diminishes me.<br>
+                Because I am involved in mankind.<br>
+                And,<br>
+                therefore,<br>
+                never send to know for whom the bells tolls,<br>
+                it tolls for thee.<br>
+                </p>
+              `;
 
             this.sidebar = vm.$z_sidebar.fromTemplate(template, {position: 'left'});
 

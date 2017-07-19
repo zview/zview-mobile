@@ -4,11 +4,12 @@
          class="tabbar-item"
          :style="{'color': menuIndex == index ? activeMenuColor : menuColor}"
          @click="menuClicked(index)">
-      <div class="icon-wrapper">
+
+      <div class="icon-wrapper" :class="{'text-hide' : (!menu.text || menu.text=='')}">
         <i :class="getIconClass(menu, index)"></i>
       </div>
 
-      <div class="text-wrapper">
+      <div class="text-wrapper" :class="{'hide' : (!menu.text || menu.text=='')}">
         <scalable>
           <span v-text="menu.text"></span>
         </scalable>
@@ -82,11 +83,12 @@
         window.__disable_nav_title_transition__ = true
 
         this.menuIndex = menuIndex
-        if (this.menus[menuIndex].path)
-          $router.forward({ path: this.menus[menuIndex].path })
+//        if (this.menus[menuIndex].path)
+//          $router.forward({ path: this.menus[menuIndex].path })
+//          vm.$emit('goto', { path: this.menus[menuIndex].path });
 
         if (this.onMenuClick) {
-          this.onMenuClick(menuIndex)
+          this.onMenuClick(menuIndex, this.menus[menuIndex].path)
         }
       },
 

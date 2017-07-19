@@ -3,7 +3,7 @@
     <div class="action-sheet-wrapper" :class="{'action-sheet-up': state == 1}">
       <div class="action-sheet">
         <div class="action-sheet-group">
-          <div class="action-sheet-title">
+          <div class="action-sheet-title" :class="{'hide' : title==''}">
             <span v-text="title"></span>
           </div>
           <button class="button action-sheet-option"
