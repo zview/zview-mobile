@@ -43,6 +43,9 @@ import Datepicker from './components/datepicker/index.vue';
 // Modal
 import Modal from './services/modal/Modal.vue'
 
+//
+import Navbar from './components/navbar/index.vue';
+
 // Services
 import $backdrop from './services/backdrop'
 import { $loading, $toast } from './services/loading'
@@ -92,18 +95,21 @@ export default {
     // Modal
     Vue.component('modal', Modal);
 
+    // App
+    Vue.component('z-navbar', Navbar);
+
     // Services
-    Vue.prototype.$zvm_backdrop = window.$backdrop = $backdrop;
-    Vue.prototype.$zvm_loading = window.$loading = $loading;
-    Vue.prototype.$zvm_toast = window.$toast = $toast;
-    Vue.prototype.$zvm_dialog = window.$dialog = $dialog;
-    Vue.prototype.$zvm_popup = window.$popup = $popup;
-    Vue.prototype.$zvm_cascadePanel = window.$cascadePanel = $cascadePanel;
-    Vue.prototype.$zvm_actionSheet = window.$actionSheet = $actionSheet;
-    Vue.prototype.$zvm_tabbar = window.$tabbar = $tabbar;
-    Vue.prototype.$zvm_sidebar = window.$sidebar = $sidebar;
-    Vue.prototype.$zvm_modal = window.$modal = $modal;
-    Vue.prototype.$zvm_storage = window.$storage = Storage;
+    Vue.prototype.$z_backdrop = window.$backdrop = $backdrop;
+    Vue.prototype.$z_loading = window.$loading = $loading;
+    Vue.prototype.$z_toast = window.$toast = $toast;
+    Vue.prototype.$z_dialog = window.$dialog = $dialog;
+    Vue.prototype.$z_popup = window.$popup = $popup;
+    Vue.prototype.$z_cascadePanel = window.$cascadePanel = $cascadePanel;
+    Vue.prototype.$z_actionSheet = window.$actionSheet = $actionSheet;
+    Vue.prototype.$z_tabbar = window.$tabbar = $tabbar;
+    Vue.prototype.$z_sidebar = window.$sidebar = $sidebar;
+    Vue.prototype.$z_modal = window.$modal = $modal;
+    Vue.prototype.$z_storage = window.$storage = Storage;
 
   }
 };

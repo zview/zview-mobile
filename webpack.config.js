@@ -58,7 +58,7 @@ var rules = [
 ]
 
 module.exports = {
-  entry: './demo/main.js',
+  entry: './demo/zviewm-main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -75,8 +75,12 @@ module.exports = {
     }
   },
   devServer: {
-    historyApiFallback: true,
-    noInfo: true
+    noInfo: false,
+    historyApiFallback: true,//不跳转
+    inline: true, //实时刷新
+    hot: false, //热部署
+    compress: false, //压缩
+    open: false //打开浏览器
   },
   devtool: '#eval-source-map'
 }
@@ -98,7 +102,7 @@ if (process.env.NODE_ENV === 'production') {
     // }
   } else { // docs
     module.exports.entry = [
-      './demo/main.js'
+      './demo/zviewm-main.js'
     ]
     module.exports.output = {
       path: path.resolve(__dirname, './docs'),
