@@ -2,56 +2,63 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import zviewm from 'zview-mobile';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 Vue.use(zviewm);
 
 import App from './zviewm-app.vue';
 
-import Index from './components/Index'
-import Home from './components/Home'
-import Button from './components/Button'
-import MdButton from './components/MdButton'
-import Input from './components/Input'
-import InputDefault from './components/InputDefault'
-import InputFloatingLabel from './components/InputFloatingLabel'
-import Search from './components/Search'
-import Radio from './components/Radio'
-import Checkbox from './components/Checkbox'
-import Toggle from './components/Toggle'
-import RangeSlider from './components/RangeSlider'
-import Badge from './components/Badge'
-import Dialog from './components/Dialog'
+import Index from './components/Index.vue';
+import Home from './components/Home.vue';
+import Button from './components/Button.vue';
+import MdButton from './components/MdButton.vue';
+import Input from './components/Input.vue';
+import InputDefault from './components/InputDefault.vue';
+import InputFloatingLabel from './components/InputFloatingLabel.vue';
+import Search from './components/Search.vue';
+import Radio from './components/Radio.vue';
+import Checkbox from './components/Checkbox.vue';
+import Toggle from './components/Toggle.vue';
+import RangeSlider from './components/RangeSlider.vue';
+import Badge from './components/Badge.vue';
+import Dialog from './components/Dialog.vue';
 
 // Layout
-import Header from './components/Header'
-import List from './components/List'
-import Cells from './components/Cells'
-import Tabs from './components/Tabs'
-import ButtonBar from './components/ButtonBar'
-import Scalable from './components/Scalable'
+import Header from './components/Header.vue';
+import List from './components/List.vue';
+import Cells from './components/Cells.vue';
+import Tabs from './components/Tabs.vue';
+import ButtonBar from './components/ButtonBar.vue';
+import Scalable from './components/Scalable.vue';
 
 // Advanced
-import Swiper from './components/Swiper'
-import SwiperDefault from './components/SwiperDefault'
-import SwiperVertical from './components/SwiperVertical'
-import VSwipe from './components/VSwipe'
-import Scroll from './components/Scroll'
-import VueScroller from './components/VueScroller'
-import Cascade from './components/Cascade'
-import Accordion from './components/Accordion'
-import Datepicker from './components/DatePicker'
-import Popup from './components/Popup'
-import ActionSheet from './components/ActionSheet'
-import Tabbar from './components/Tabbar'
-import TabbarHome from './components/tabbar/Home'
-import TabbarDiscount from './components/tabbar/Discount'
-import TabbarCart from './components/tabbar/Cart'
-import TabbarUser from './components/tabbar/User'
-import PageFromTabbar from './components/tabbar/PageFromTabbar'
-import TabbarWithoutRoutes from './components/TabbarWithoutRoutes'
-import Modal from './components/Modal'
+import Swiper from './components/Swiper.vue';
+import SwiperDefault from './components/SwiperDefault.vue';
+import SwiperVertical from './components/SwiperVertical.vue';
+import VSwipe from './components/VSwipe.vue';
+import Scroll from './components/Scroll.vue';
+import VueScroller from './components/VueScroller.vue';
+import Cascade from './components/Cascade.vue';
+import Accordion from './components/Accordion.vue';
+import Datepicker from './components/Datepicker.vue';
+import Popup from './components/Popup.vue';
+import ActionSheet from './components/ActionSheet.vue';
+import Tabbar from './components/TabBar.vue';
+import TabbarHome from './components/tabbar/Home.vue';
+import TabbarDiscount from './components/tabbar/Discount.vue';
+import TabbarCart from './components/tabbar/Cart.vue';
+import TabbarUser from './components/tabbar/User.vue';
+import PageFromTabbar from './components/tabbar/PageFromTabbar.vue';
+import TabbarWithoutRoutes from './components/TabBarWithoutRoutes.vue';
+import Modal from './components/Modal.vue';
 
-import Test from './components/Test'
+// Extra
+import Panel from './components/Panel.vue';
+import Gallery from './components/Gallery.vue';
+import Upload from './components/Upload.vue';
+
+// Example
+import Example1 from './components/Example1.vue';
+import Test from './components/Test.vue';
 
 const Routers = [
   { path: '/', component: Index },
@@ -103,7 +110,13 @@ const Routers = [
   { path: '/advanced/modal', component: Modal },
   { path: '/advanced/datepicker', component: Datepicker },
 
-  // test
+  // Extra
+  { path: '/extra/panel', component: Panel },
+  { path: '/extra/gallery', component: Gallery },
+  { path: '/extra/upload', component: Upload },
+
+  // Example
+  { path: '/example1', component: Example1 },
   { path: '/test', component: Test }
 ];
 

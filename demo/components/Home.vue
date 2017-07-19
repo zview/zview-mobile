@@ -148,6 +148,36 @@
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
                 </list>
+
+                <!-- extra -->
+                <div class="item item-divider">扩展</div>
+                <list class="list-ios hl-list-borderless">
+                    <item class="item-icon-right" @click.native="$router.push('/extra/panel')">
+                        Panel <span class="item-note">面板</span>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </item>
+                    <item class="item-icon-right" @click.native="$router.push('/extra/gallery')">
+                        Gallery <span class="item-note">相册</span>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </item>
+                    <item class="item-icon-right" @click.native="$router.push('/extra/upload')">
+                        Upload <span class="item-note">上传</span>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </item>
+                </list>
+
+                <!-- example -->
+                <div class="item item-divider">示例</div>
+                <list class="list-ios hl-list-borderless">
+                    <item class="item-icon-right" @click.native="$router.push('/example1')">
+                        Example1 <span class="item-note">示例1</span>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </item>
+                    <item class="item-icon-right" @click.native="$router.push('/test')">
+                        Test <span class="item-note">测试</span>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </item>
+                </list>
                 <div class="footer"></div>
             </div>
         </div>
