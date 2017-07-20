@@ -43,8 +43,11 @@ import Datepicker from './components/datepicker/index.vue';
 // Modal
 import Modal from './services/modal/Modal.vue'
 
-//
+//Extra
+import VonIcon from './components/icon/index.vue';
 import Navbar from './components/navbar/index.vue';
+import {Gallery, GalleryItem} from './components/gallery/index.vue';
+
 
 // Services
 import $backdrop from './services/backdrop'
@@ -71,7 +74,7 @@ export default {
     Vue.component('von-toggle', VonToggle);
     Vue.component('von-range', VonRange);
     Vue.component('von-header', VonHeader);
-    Vue.component('badge', VonBadge);
+    Vue.component('badge', VonBadge);  //badge
 
     // Layout
     Vue.component('list', HairlineList);
@@ -95,8 +98,11 @@ export default {
     // Modal
     Vue.component('modal', Modal);
 
-    // App
+    // Extra
+    Vue.component('z-icon', VonIcon);
     Vue.component('z-navbar', Navbar);
+    Vue.component('z-gallery', Gallery);
+    Vue.component('z-gallery-item', GalleryItem);
 
     // Services
     Vue.prototype.$z_backdrop = window.$backdrop = $backdrop;

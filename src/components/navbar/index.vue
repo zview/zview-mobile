@@ -12,11 +12,14 @@
   import Navbar from './Navbar'
 
   Vue.directive('nav', {
-    inserted: function (el, binding) {
-      let data = binding.value
-      channel.$emit('UpdateNavbar', data)
-    }
-  })
+      bind: function(el, binding){
+//          console.log('bind:', binding.value);
+      },
+      inserted: function (el, binding) {
+          let data = binding.value;
+          channel.$emit('UpdateNavbar', data);
+      }
+  });
 
   export default {
     components: {

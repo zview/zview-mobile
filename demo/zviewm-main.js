@@ -6,9 +6,10 @@ Vue.use(VueRouter);
 Vue.use(zviewm);
 
 import App from './zviewm-app.vue';
-
 import Index from './components/Index.vue';
 import Home from './components/Home.vue';
+
+// Basic
 import Button from './components/Button.vue';
 import MdButton from './components/MdButton.vue';
 import Input from './components/Input.vue';
@@ -58,11 +59,14 @@ import Upload from './components/Upload.vue';
 
 // Example
 import Example1 from './components/Example1.vue';
+import Example1Editor from './components/Example1Editor.vue';
 import Test from './components/Test.vue';
 
 const Routers = [
   { path: '/', component: Index },
   { path: '/home', component: Home },
+
+  // Basic
   { path: '/basic/button', component: Button },
   { path: '/basic/mdButton', component: MdButton },
   { path: '/basic/input', component: Input },
@@ -117,6 +121,7 @@ const Routers = [
 
   // Example
   { path: '/example1', component: Example1 },
+  { path: '/example1/editor', component: Example1Editor },
   { path: '/test', component: Test }
 ];
 

@@ -19,7 +19,7 @@
         methods: {
             back() {
                 let vm = this;
-                vm.$router.back({path: '/home'})
+                vm.$router.push({path: '/home'})
             }
         }
     }

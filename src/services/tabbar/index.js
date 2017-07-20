@@ -16,6 +16,9 @@ const createElement = (marker, tag) => {
 let _vm = undefined;
 
 Vue.directive('tabbar', {
+  bind: function(el, binding){
+    // console.log('bind:', binding.value);
+  },
   inserted: function (el, binding) {
     setTimeout(() => {
       let props = {}
@@ -35,7 +38,7 @@ Vue.directive('tabbar', {
       })).$mount('[von-tabbar]')
     })
   }
-})
+});
 
 function vmReady() {
   let cnt = 0;

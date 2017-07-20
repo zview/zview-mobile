@@ -1,0 +1,11 @@
+.gallery {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  .gallery-item {
+    height: 100%;
+    float: left;
+    width: 25%;
+  }
+}
