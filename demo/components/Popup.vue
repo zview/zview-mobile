@@ -32,13 +32,13 @@
                         {text: '确定'},
                         {text: '取消'},
                     ]
-                }
+                };
 
-                let popup = vm.$z_popup.fromTemplate('<p style="margin-bottom: 0; text-align: center;">自定义内容</p>', options)
+                let popup = vm.$z_popup.fromTemplate('<p style="margin-bottom: 0; text-align: center;">自定义内容</p>', options);
 
                 popup.show().then((buttonIndex) => {
                     console.log(buttonIndex)
-                })
+                });
             },
 
             showCustomPopup2() {
@@ -50,18 +50,18 @@
                         {text: '确定', theme: 'assertive'}
                     ],
                     showClose: true
-                }
+                };
 
                 let template = `
-          <p style="margin-bottom: 10px; text-align: center; font-size: 16px;">带有关闭按钮</p>
-          <p style="margin-bottom: 0; text-align: center;">自定义内容</p>
-        `
+                  <p style="margin-bottom: 10px; text-align: center; font-size: 16px;">带有关闭按钮</p>
+                  <p style="margin-bottom: 0; text-align: center;">自定义内容</p>
+                `;
 
-                let popup = vm.$z_popup.fromTemplate(template, options)
+                let popup = vm.$z_popup.fromTemplate(template, options);
 
                 popup.show().then((buttonIndex) => {
                     console.log(buttonIndex)
-                })
+                });
 
                 /* fromTemplateUrl sample */
 

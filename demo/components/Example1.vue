@@ -24,29 +24,31 @@
             </md-button>
         </div>
 
-        <div class="template-drawer" v-if="drawer_show">
-            <div class="template-drawer-operator">
-                <z-icon icon="ion-android-sync" :text="style_text" @click.native="_switch_style"></z-icon>
-                <z-icon icon="ion-android-done" text="完成" theme="energized" @click.native="_on_hide_template_selector" style="float: right;"></z-icon>
-            </div>
-
-            <div class="template-drawer-selector">
-
-                <div class="theme-gallery">
-                    <z-gallery direction="horizontal" spacewidth="5">
-                        <z-gallery-item :style="'background-color:'+theme.color+';' " v-for="(theme, index) in theme_defines" :key="index">
-                            <div class="theme-gallery-item" @click="_on_theme_click(index)" :class="{'active': index == theme_selected}">{{theme.name}}</div>
-                        </z-gallery-item>
-                    </z-gallery>
+        <transition name="drawer">
+            <div class="template-drawer" v-if="drawer_show">
+                <div class="template-drawer-operator">
+                    <z-icon icon="ion-android-sync" :text="style_text" @click.native="_switch_style"></z-icon>
+                    <z-icon icon="ion-android-done" text="完成" theme="energized" @click.native="_on_hide_template_selector" style="float: right;"></z-icon>
                 </div>
 
-                <div class="theme-serial">
-                    <cells class="theme-serial-item" outer-border="false" inner-border="false" theme="transparent"
-                           :items="theme_serials" :on-cell-click="_on_serial_click" row="1" :col="theme_serials.length"></cells>
-                </div>
+                <div class="template-drawer-selector">
 
+                    <div class="theme-gallery">
+                        <z-gallery direction="horizontal" spacewidth="5">
+                            <z-gallery-item :style="'background-color:'+theme.color+';' " v-for="(theme, index) in theme_defines" :key="index">
+                                <div class="theme-gallery-item" @click="_on_theme_click(index)" :class="{'active': index == theme_selected}">{{theme.name}}</div>
+                            </z-gallery-item>
+                        </z-gallery>
+                    </div>
+
+                    <div class="theme-serial">
+                        <cells class="theme-serial-item" outer-border="false" inner-border="false" theme="transparent"
+                               :items="theme_serials" :on-cell-click="_on_serial_click" row="1" :col="theme_serials.length"></cells>
+                    </div>
+
+                </div>
             </div>
-        </div>
+        </transition>
 
     </div>
 </template>
@@ -102,6 +104,7 @@
                 {
                     case 0:
                         console.log('home');
+                        vm.$z_toast.show('返回首页', 1500);
                         break;
                     case 1:
                         console.log('insert');
@@ -220,6 +223,24 @@
         -webkit-transition: opacity .2s;
     }
 
+
+    .drawer-enter-active, .drawer-leave-active
+    {
+        transition: transform .3s ease-in-out;
+        -webkit-transition: -webkit-transform .3s ease-in-out;
+
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+    }
+    .drawer-enter, .drawer-leave-active
+    {
+        transition: transform .3s ease-in-out;
+        -webkit-transition: -webkit-transform .3s ease-in-out;
+
+        transform: translate(0, 100%);
+        -webkit-transform: translate(0, 100%);
+    }
+
     .template-drawer
     {
         position: fixed;
@@ -231,9 +252,6 @@
         background-color: transparent;
         margin: 0;
         padding: 0;
-        opacity: 1;
-        transition: opacity .3s;
-        -webkit-transition: opacity .3s;
     }
     .template-drawer-operator
     {
