@@ -45,6 +45,7 @@ import Modal from './services/modal/Modal.vue'
 
 //Extra
 import VonIcon from './components/icon/index.vue';
+import VonPanel from './components/panel/index.vue';
 import Navbar from './components/navbar/index.vue';
 import {Gallery, GalleryItem} from './components/gallery/index.vue';
 
@@ -100,6 +101,7 @@ export default {
 
     // Extra
     Vue.component('z-icon', VonIcon);
+    Vue.component('z-panel', VonPanel);
     Vue.component('z-navbar', Navbar);
     Vue.component('z-gallery', Gallery);
     Vue.component('z-gallery-item', GalleryItem);

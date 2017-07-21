@@ -3,7 +3,8 @@
 // http://philipwalton.github.io/solved-by-flexbox/
 // https://github.com/philipwalton/solved-by-flexbox
 
-@mixin display-flex {
+@mixin display-flex
+{
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -12,7 +13,8 @@
   display: flex;
 }
 
-@mixin display-inline-flex {
+@mixin display-inline-flex
+{
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -moz-inline-flex;
@@ -20,7 +22,8 @@
   display: inline-flex;
 }
 
-@mixin flex-direction($value: row) {
+@mixin flex-direction($value: row)
+{
   @if $value == row-reverse {
     -webkit-box-direction: reverse;
     -webkit-box-orient: horizontal;
@@ -40,7 +43,8 @@
   flex-direction: $value;
 }
 
-@mixin flex-wrap($value: nowrap) {
+@mixin flex-wrap($value: nowrap)
+{
   // No Webkit Box fallback.
   -webkit-flex-wrap: $value;
   -moz-flex-wrap: $value;
@@ -52,7 +56,8 @@
   flex-wrap: $value;
 }
 
-@mixin flex($fg: 1, $fs: null, $fb: null) {
+@mixin flex($fg: 1, $fs: null, $fb: null)
+{
   -webkit-box-flex: $fg;
   -webkit-flex: $fg $fs $fb;
   -moz-box-flex: $fg;
@@ -276,31 +281,47 @@
 }
 
 // transform
-@mixin rotate($degrees) {
+@mixin rotate($degrees)
+{
   @include transform( rotate($degrees) );
 }
-@mixin scale($ratio) {
+@mixin scale($ratio)
+{
   @include transform( scale($ratio) );
 }
-@mixin translate($x, $y) {
+@mixin translate($x, $y)
+{
   @include transform( translate($x, $y) );
 }
-@mixin skew($x, $y) {
+@mixin skew($x, $y)
+{
   @include transform( skew($x, $y) );
   -webkit-backface-visibility: hidden;
 }
-@mixin translate3d($x, $y, $z) {
+@mixin translate3d($x, $y, $z)
+{
   @include transform( translate3d($x, $y, $z) );
 }
-@mixin translateZ($z) {
+@mixin translateZ($z)
+{
   @include transform( translateZ($z) );
 }
-@mixin transform($val) {
+@mixin transform($val)
+{
   -webkit-transform: $val;
           transform: $val;
 }
 
-@mixin transform-origin($left, $top) {
+@mixin transform-origin($left, $top)
+{
   -webkit-transform-origin: $left $top;
           transform-origin: $left $top;
+}
+
+
+//主题
+@mixin render_theme($bcolor, $fcolor)
+{
+  background-color: $bcolor;
+  color: $fcolor;
 }

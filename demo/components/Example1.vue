@@ -1,14 +1,17 @@
 <template>
     <div class="container">
 
-        <z-navbar v-nav="{title: '示例1', showBackButton: true}"></z-navbar>
-
-        <div class="page has-navbar has-tabbar">
-            <div class="page-content padding-top">
+        <div class="page has-tabbar">
+            <div class="page-content padding-bottom">
                 示例1
                 <div  style="height: 1000px; background-color: #0a9dc7;"></div>
                 示例1
             </div>
+        </div>
+
+        <div class="tabbar-fixer">
+            <cells class="tabbar-cells" outer-border="false" inner-border="false"
+                   :items="tabs" :on-cell-click="_on_cell_click" row="1" col="3"></cells>
         </div>
 
         <div class="floater">
@@ -19,11 +22,6 @@
             <md-button class="button button-positive button-fab template-floater" @click.native="_on_popup_template_selector">
                 模板
             </md-button>
-        </div>
-
-        <div class="tabbar-fixer">
-            <cells class="tabbar-cells" outer-border="false" inner-border="false"
-                   :items="tabs" :on-cell-click="_on_cell_click" row="1" col="3"></cells>
         </div>
 
         <div class="template-drawer" v-if="drawer_show">
@@ -189,21 +187,24 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" rel="stylesheet/scss">
 
-    .editor-floater {
+    .editor-floater
+    {
         position: fixed;
         bottom: 60px;
         left: 15px;
     }
 
-    .template-floater {
+    .template-floater
+    {
         position: fixed;
         bottom: 60px;
         right: 15px;
     }
 
-    .tabbar-fixer {
+    .tabbar-fixer
+    {
         position: fixed;
         bottom: 0;
         left: 0;
@@ -219,7 +220,8 @@
         -webkit-transition: opacity .2s;
     }
 
-    .template-drawer {
+    .template-drawer
+    {
         position: fixed;
         bottom: 0;
         left: 0;
@@ -233,62 +235,76 @@
         transition: opacity .3s;
         -webkit-transition: opacity .3s;
     }
-    .template-drawer-operator {
+    .template-drawer-operator
+    {
         padding: 5px;
         height: 30px;
     }
-    .template-drawer-selector {
+    .template-drawer-selector
+    {
         background-color: black;
         height: 165px;
         margin-top: 5px;
         padding: 5px;
     }
-    .theme-gallery {
+    .theme-gallery
+    {
         height: 130px;
         overflow: hidden;
     }
-    .theme-serial {
+    .theme-serial
+    {
         height: 25px;
     }
 
 
-    .tabbar-cells {
+    .tabbar-cells
+    {
         margin: 0;
     }
-    .tabbar-cells .row {
+    .tabbar-cells .row
+    {
         height: 44px;
     }
-    .tabbar-item {
+    .tabbar-item
+    {
         font-size: 18px;
         height: 44px;
         line-height: 40px;
     }
-    .tabbar-item span {
+    .tabbar-item span
+    {
         padding-left: 5px;
     }
 
-    .theme-serial {
+    .theme-serial
+    {
         margin: 0;
         padding: 0 15px;
     }
-    .theme-serial-item {
+    .theme-serial-item
+    {
         margin: 0;
         color: gray;
     }
-    .theme-serial-item .row {
+    .theme-serial-item .row
+    {
         height: 25px;
     }
 
-    div.theme-gallery-item {
+    div.theme-gallery-item
+    {
         text-align: center;
         height: 120px;
         line-height: 120px;
     }
-    div.theme-gallery-item.active {
+    div.theme-gallery-item.active
+    {
         border: solid 1px #f3f3f3;
     }
 
-    div.theme-serial .row .col.active {
+    div.theme-serial .row .col.active
+    {
         border-radius: 10px;
         background-color: rgba(99, 99, 99, 0.6);
     }

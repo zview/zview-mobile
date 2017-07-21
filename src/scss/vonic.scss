@@ -2,8 +2,11 @@
 
 @import "variables";
 @import "mixins";
+
 @import "scaffolding";
 @import "font";
+
+@import "common";
 
 @import "view";
 @import "page";
@@ -37,3 +40,4 @@
 
 @import "icon";
 @import "gallery";
+@import "panel";

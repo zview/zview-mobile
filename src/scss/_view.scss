@@ -1,15 +1,18 @@
 @import "variables";
 @import "mixins";
 
-@mixin view-right() {
+@mixin view-right()
+{
   @include translate3d(100%, 0, 0);
 }
 
-@mixin view-left() {
+@mixin view-left()
+{
   @include translate3d(-33%, 0, 0);
 }
 
-@mixin view-center() {
+@mixin view-center()
+{
   @include translate3d(0, 0, 0);
 }
 
@@ -31,7 +34,8 @@
   @include transition-timing-function($android-transition-timing-function);
 }
 
-[transition-direction="forward"] {
+[transition-direction="forward"]
+{
   .page-enter {
     @include view-right();
     opacity: 1;
@@ -57,7 +61,8 @@
   }
 }
 
-[transition-direction="back"] {
+[transition-direction="back"]
+{
   .page-enter {
     @include view-left();
     opacity: 0.8;

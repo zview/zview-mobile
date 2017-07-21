@@ -23,7 +23,7 @@
 
   &.has-tabbar {
     .page-content {
-      margin-bottom: 44px;
+      margin-bottom: $tabbar-height;
     }
   }
 }
@@ -53,5 +53,5 @@
 }
 
 .modal .page-content {
-  padding-top: 44px;
+  padding-top: $header-height;
 }

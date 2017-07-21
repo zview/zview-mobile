@@ -1,7 +1,8 @@
 $sidebars-z-index-default: 1;
 $sidebars-z-index-active: 11;
 
-[von-sidebar-container] {
+[von-sidebar-container]
+{
   position: absolute;
   left: 0;
   top: 0;
@@ -23,7 +24,8 @@ $sidebars-z-index-active: 11;
   }
 }
 
-.von-sidebar-wrapper {
+.von-sidebar-wrapper
+{
   height: 100%;
 
   .click-block-sidebar {

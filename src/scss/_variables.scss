@@ -8,7 +8,7 @@
 //$royal:                           #886aea !default;
 //$dark:                            #444 !default;
 
-$light:                           #fff !default;
+$light:                           #ffffff !default;
 $stable:                          #f5f5f5 !default;
 $positive:                        #4a90e2 !default;
 $calm:                            #11c1f3 !default;
@@ -18,6 +18,18 @@ $assertive:                       #ea5a49 !default;
 $royal:                           #b5b5b5 !default;
 $dark:                            #484746 !default;
 
+
+$black:                           #000000 !default;
+$dimgray:                         #696969 !default;
+$gray:                            #808080 !default;
+$darkgray:                        #a9a9a9 !default;
+$silver:                          #c0c0c0 !default;
+$lightgrey:                       #d3d3d3 !default;
+$gainsboro:                       #dcdcdc !default;
+$whitesmoke:                      #f5f5f5 !default;
+$white:                           #ffffff !default;
+
+//
 $padding:                         10px;
 
 /* Page */
@@ -25,14 +37,18 @@ $default-page-bg:                 #f5f5f5;
 
 /* Header */
 $header-height:                   44px;
+$navbar-height:                   44px;
+$tabbar-height:                   44px;
 
 /* Thin Border */
 $default-border-color:            #ddd;
 
+//
 $ios-transition-duration:              500ms !default;
 $ios-transition-timing-function:       cubic-bezier(.36, .66, .04, 1) !default;
 
 $android-transition-duration:          200ms !default;
 $android-transition-timing-function:   cubic-bezier(0.4, 0.6, 0.2, 1) !default;
 
+//
 $font-stack: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
