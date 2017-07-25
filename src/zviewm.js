@@ -37,7 +37,7 @@ import Scalable from './components/scalable/index.vue';
 import {Swiper, SwiperItem} from './components/swiper/index.vue';
 import Scroll from './components/scroll/index.vue';
 import Cascade from './components/cascade/index.vue';
-import { Accordion, AccordionItem } from './components/accordion/index.vue';
+import { Accordion, AccordionItem, AccordionRadio } from './components/accordion/index.vue';
 import Datepicker from './components/datepicker/index.vue';
 
 // Modal
@@ -100,6 +100,7 @@ export default {
     Vue.component('modal', Modal);
 
     // Extra
+    Vue.component('accordion-radio', AccordionRadio);
     Vue.component('z-icon', VonIcon);
     Vue.component('z-panel', VonPanel);
     Vue.component('z-navbar', Navbar);

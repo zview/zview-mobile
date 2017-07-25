@@ -164,6 +164,10 @@
                         Upload <span class="item-note">上传</span>
                         <i class="icon ion-ios-arrow-right"></i>
                     </item>
+                    <item class="item-icon-right" @click.native="$router.push('/extra/accordionradio')">
+                        AccordionRadio <span class="item-note">折叠单选</span>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </item>
                 </list>
 
                 <!-- example -->

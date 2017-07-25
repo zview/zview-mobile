@@ -1,21 +1,21 @@
 <template>
   <div class="list von-radio">
-    <div class="item item-borderless item-icon-left"
+    <div class="item item-borderless" :class="{'item-icon-left': align=='left', 'item-icon-right': align=='right'}"
            v-for="(option, i) in options" @click="onClick(i)"
     >
       <hairline-top v-if="i > 0"></hairline-top>
-      <input type="radio" :name="radioId" v-model="v" :value="i">
+      <input type="radio" :name="radioId" v-model="selected" :value="i">
       <i
         class="icon ion-ios-checkmark"
         :class="{
-          'grey': v != i,
-          'assertive': v == i && theme == 'assertive',
-          'positive': v == i && theme == 'positive',
-          'balanced': v == i && theme == 'balanced',
-          'energized': v == i && theme == 'energized',
-          'calm': v == i && theme == 'calm',
-          'royal': v == i && theme == 'royal',
-          'dark': v == i && theme == 'dark'
+          'grey': selected != i,
+          'assertive': selected == i && theme == 'assertive',
+          'positive': selected == i && theme == 'positive',
+          'balanced': selected == i && theme == 'balanced',
+          'energized': selected == i && theme == 'energized',
+          'calm': selected == i && theme == 'calm',
+          'royal': selected == i && theme == 'royal',
+          'dark': selected == i && theme == 'dark'
         }"
       >
       </i>
@@ -49,25 +49,29 @@
       theme: {
         type: String,
         default: 'assertive'
+      },
+
+      align: {
+        type: String,
+        default: 'left'
       }
     },
 
     computed: {
-      v: function () {
-        return this.value
-      }
+
     },
 
     data() {
       return {
-        radioId: 'von-radio-' + Math.random().toString(36).substring(3, 6)
+        radioId: 'von-radio-' + Math.random().toString(36).substring(3, 6),
+        selected: this.value,
       }
     },
 
     methods: {
       onClick(value) {
-        this.v = value
-        this.$emit('input', value)
+        this.selected = value;
+        this.$emit('input', value);
       }
     }
   }

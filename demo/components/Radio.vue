@@ -26,7 +26,7 @@
     export default{
         data(){
             return {
-                gender: 0,
+                gender: 1,
                 genderOptions: ["男", "女"]
             }
         }

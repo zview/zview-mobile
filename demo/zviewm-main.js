@@ -56,6 +56,7 @@ import Modal from './components/Modal.vue';
 import Panel from './components/Panel.vue';
 import Gallery from './components/Gallery.vue';
 import Upload from './components/Upload.vue';
+import AccordionRadio from './components/AccordionRadio.vue';
 
 // Example
 import Example1 from './components/Example1.vue';
@@ -118,6 +119,7 @@ const Routers = [
   { path: '/extra/panel', component: Panel },
   { path: '/extra/gallery', component: Gallery },
   { path: '/extra/upload', component: Upload },
+  { path: '/extra/accordionradio', component: AccordionRadio },
 
   // Example
   { path: '/example1', component: Example1 },
