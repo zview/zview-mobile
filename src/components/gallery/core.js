@@ -29,30 +29,40 @@ function Swiper(container, swiperOptions) {
   let itemClass = options.itemClass;
   console.log('option space', spacewidth, 'class', itemClass);
 
-  let items = container.querySelectorAll(itemClass);
-  let count = items.length;
-
   let width = container.getBoundingClientRect().width || container.offsetWidth;
   let height = container.getBoundingClientRect().height || container.offsetHeight;
   console.log('container width', width, 'height', height);
 
-  let item = items[0];
-  let item_width = item.offsetWidth;
-  let item_height = item.offsetHeight;
-  console.log('item width', item_width, 'height', item_height);
-
-
   // Setup
   function setup() {
+
+    let items = container.querySelectorAll(itemClass);
+    let count = items.length;
+
+    let item = items[0];
+    let item_width = item.offsetWidth;
+    let item_height = item.offsetHeight;
+    console.log('item width', item_width, 'height', item_height);
+
     // reset container's width and height
     var w = width;
     var h = (item_height + Number(spacewidth)) * count;
     maxoffset = h - height;
 
+    //最小调整为容器高度
+    if(h<height) {
+      h = height;
+    }
+
     if (options.direction === 'horizontal') { //水平
       w = (item_width + Number(spacewidth)) * count;
       h = height;
       maxoffset = w - width;
+
+      //最小调整为容器宽度
+      if(w<width) {
+        w = width;
+      }
     }
 
     // console.log('setup', count, w, h, maxoffset);
@@ -246,7 +256,6 @@ function Swiper(container, swiperOptions) {
       window.removeEventListener('resize', resize)
     },
 
-    count: count,
   }
 
 }

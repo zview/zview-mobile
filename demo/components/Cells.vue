@@ -28,7 +28,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" rel="stylesheet/scss">
 
     .entrance {
         height: 120px;
@@ -93,7 +93,8 @@
                     '<div class="entrance energized"><i class="icon ion-ios-star"></i><br><span>好评</span></div>',
                     '<div class="entrance balanced"><i class="icon ion-ios-location"></i><br><span>附近</span></div>',
                     '<div class="entrance positive"><i class="icon ion-ios-search"></i><br><span>搜索</span></div>',
-                ]
+                ],
+
             }
         },
 

@@ -28,7 +28,7 @@ import VonBadge from './components/badge/index.vue';
 // Layout
 import HairlineList from './components/list/HairlineList.vue';
 import HairlineItem from './components/list/HairlineItem.vue';
-import Cells from './components/cells/index.vue';
+import { Cells } from './components/cells/index.vue';
 import Tabs from './components/tabs/index.vue';
 import ButtonBar from './components/buttonbar/index.vue';
 import Scalable from './components/scalable/index.vue';
