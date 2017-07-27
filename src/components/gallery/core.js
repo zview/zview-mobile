@@ -47,22 +47,24 @@ function Swiper(container, swiperOptions) {
     // reset container's width and height
     var w = width;
     var h = (item_height + Number(spacewidth)) * count;
-    maxoffset = h - height;
 
     //最小调整为容器高度
     if(h<height) {
       h = height;
     }
 
+    maxoffset = h - height;
+
     if (options.direction === 'horizontal') { //水平
       w = (item_width + Number(spacewidth)) * count;
       h = height;
-      maxoffset = w - width;
 
       //最小调整为容器宽度
       if(w<width) {
         w = width;
       }
+
+      maxoffset = w - width;
     }
 
     // console.log('setup', count, w, h, maxoffset);
